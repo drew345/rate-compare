@@ -1,0 +1,17 @@
+﻿{
+  "name": "Rate Compare",
+  "short_name": "RateCompare",
+  "description": "Compare your card FX rate to a published reference.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0b1b2b",
+  "theme_color": "#0b1b2b",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

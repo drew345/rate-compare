@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101827" />
+    <meta name="description" content="Compare your card FX rate to the published mid-market rate." />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Rate Compare</title>
+  </head>
+  <body>
+    <main class="page">
+      <section class="inputs">
+        <div class="input-card">
+          <label for="krw">KRW amount</label>
+          <input id="krw" type="number" inputmode="decimal" enterkeyhint="next" placeholder="e.g. 250000" />
+        </div>
+        <div class="input-card">
+          <label for="usd">USD charged</label>
+          <input id="usd" type="number" inputmode="decimal" enterkeyhint="done" placeholder="e.g. 185.42" />
+        </div>
+      </section>
+
+      <section class="results">
+        <div class="result-card">
+          <h2>Your Effective Rate</h2>
+          <div class="result-value">
+            <span id="effective-rate">--</span>
+            <span class="unit">KRW/$</span>
+          </div>
+        </div>
+        <div class="result-card">
+          <h2>Published Rate</h2>
+          <div class="result-value">
+            <span id="published-rate">--</span>
+            <span class="unit">KRW/$</span>
+          </div>
+          <p id="published-meta" class="muted"></p>
+        </div>
+        <div class="result-card highlight">
+          <h2>Exchange Result</h2>
+          <div id="delta-rate" class="result-value">--</div>
+          <p id="delta-caption" class="muted">Waiting for inputs...</p>
+        </div>
+        <div class="result-card">
+          <h2>Dollar Impact</h2>
+          <div id="impact" class="result-value">--</div>
+          <p id="impact-caption" class="muted">Lost in exchange</p>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button id="refresh" class="btn">Refresh Published Rate</button>
+        <a class="link" href="https://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=KRW" target="_blank" rel="noreferrer">
+          XE reference
+        </a>
+      </div>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
+
+
