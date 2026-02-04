@@ -1,0 +1,147 @@
+:root {
+  color-scheme: light;
+  --bg: #101827;
+  --ink: #f6f4ef;
+  --accent: #f7b552;
+  --accent-2: #5bd4c5;
+  --card: rgba(12, 18, 30, 0.9);
+  --card-border: rgba(246, 244, 239, 0.14);
+  --muted: rgba(246, 244, 239, 0.65);
+  --shadow: 0 18px 40px rgba(3, 10, 20, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #1a2a45 0%, #0f1624 60%, #0a101a 100%);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 12px 12px 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.inputs {
+  display: grid;
+  gap: 8px;
+}
+
+.input-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  padding: 10px 12px;
+  border-radius: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+input {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(246, 244, 239, 0.2);
+  background: rgba(5, 10, 18, 0.9);
+  color: var(--ink);
+  font-size: 1.05rem;
+}
+
+input:focus {
+  outline: 2px solid rgba(247, 181, 82, 0.6);
+}
+
+.results {
+  display: grid;
+  gap: 8px;
+}
+
+.result-card {
+  background: rgba(10, 18, 28, 0.85);
+  border-radius: 16px;
+  padding: 10px 12px;
+  border: 1px solid var(--card-border);
+}
+
+.result-card.highlight {
+  background: linear-gradient(120deg, rgba(247, 181, 82, 0.2), rgba(91, 212, 197, 0.1));
+  border: 1px solid rgba(247, 181, 82, 0.4);
+}
+
+.result-card h2 {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.result-value {
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.unit {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn {
+  background: var(--accent);
+  color: #1b1206;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.link {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(246, 244, 239, 0.3);
+  padding-bottom: 2px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 420px) {
+  .page {
+    padding: 16px 14px 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
