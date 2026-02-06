@@ -1,4 +1,4 @@
-﻿const CACHE_NAME = "rate-compare-v1";
+const CACHE_NAME = "rate-compare-v2";
 const ASSETS = [
   "./",
   "./index.html",
