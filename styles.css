@@ -122,12 +122,87 @@ input:focus {
   box-shadow: var(--shadow);
 }
 
+.btn-secondary {
+  background: rgba(246, 244, 239, 0.12);
+  color: var(--ink);
+  border: 1px solid var(--card-border);
+  box-shadow: none;
+}
+
 .link {
   color: var(--ink);
   text-decoration: none;
   border-bottom: 1px solid rgba(246, 244, 239, 0.3);
   padding-bottom: 2px;
   font-size: 0.9rem;
+}
+
+.history {
+  margin-top: 4px;
+  display: grid;
+  gap: 8px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.history-header h2 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: var(--ink);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+  border-bottom: 1px solid rgba(246, 244, 239, 0.3);
+}
+
+.history-list {
+  display: grid;
+  gap: 8px;
+}
+
+.history-item {
+  background: rgba(6, 12, 20, 0.75);
+  border-radius: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--card-border);
+  display: grid;
+  gap: 6px;
+}
+
+.history-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.history-row strong {
+  font-weight: 600;
+}
+
+.history-meta {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.delete-entry {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0;
+  align-self: flex-start;
 }
 
 @media (max-width: 420px) {
